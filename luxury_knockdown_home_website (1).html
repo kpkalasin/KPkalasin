@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXWOOD RESORT HOMES - นวัตกรรมบ้านไม้โมเดิร์นหรูสไตล์รีสอร์ต</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Prompt & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        wood: {
+                            100: '#F5EFEB',
+                            200: '#E6D7C3',
+                            300: '#CBB292',
+                            400: '#B08D5B',
+                            500: '#8C6239', // Warm Mahogany / Teak
+                            600: '#6E4823',
+                            700: '#523314',
+                            800: '#3A2109',
+                            900: '#231203',
+                        },
+                        forest: {
+                            800: '#1C2E24',
+                            900: '#122019',
+                            950: '#0B1410', // Deep Forest Green
+                        },
+                        amberGold: {
+                            400: '#E0AD53',
+                            500: '#D4952B',
+                            600: '#A66E14',
+                        },
+                        sand: {
+                            50: '#FAF8F5',
+                            100: '#F3ECE1',
+                            200: '#E5D8C5',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Prompt', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .wood-gradient-text {
+            background: linear-gradient(135deg, #F5EFEB 0%, #E0AD53 50%, #CBB292 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .wood-btn {
+            background: linear-gradient(135deg, #D4952B 0%, #8C6239 100%);
+            transition: all 0.3s ease;
+        }
+        .wood-btn:hover {
+            background: linear-gradient(135deg, #E0AD53 0%, #A66E14 100%);
+            box-shadow: 0 10px 20px -10px rgba(212, 149, 43, 0.4);
+        }
+        .wood-texture-bg {
+            background-color: #0B1410;
+            background-image: radial-gradient(#1C2E24 0.75px, transparent 0.75px);
+            background-size: 16px 16px;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #122019;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #8C6239;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="bg-forest-950 text-slate-200 font-sans selection:bg-amberGold-500 selection:text-forest-950 custom-scrollbar wood-texture-bg">
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-40 bg-forest-950/90 backdrop-blur-md border-b border-wood-500/20 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg border border-amberGold-500/50 flex items-center justify-center bg-forest-900 shadow-inner">
+                    <i class="fa-solid fa-tree text-amberGold-400 text-xl"></i>
+                </div>
+                <div>
+                    <span class="font-serif text-2xl font-bold tracking-wider wood-gradient-text block leading-none">LUXWOOD</span>
+                    <span class="text-[9px] tracking-[0.25em] text-sand-200 uppercase">Resort & Garden Homes</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm uppercase tracking-wider font-medium text-slate-300">
+                <a href="#hero" class="hover:text-amberGold-400 transition-colors">หน้าแรก</a>
+                <a href="#catalog" class="hover:text-amberGold-400 transition-colors">แบบบ้านสวนไม้หรู</a>
+                <a href="#craftsmanship" class="hover:text-amberGold-400 transition-colors">คุณค่าและงานไม้</a>
+                <a href="#calculator" class="hover:text-amberGold-400 transition-colors">คำนวณราคาบ้านไม้</a>
+                <a href="#gallery" class="hover:text-amberGold-400 transition-colors">ผลงานจริง</a>
+                <a href="#testimonials" class="hover:text-amberGold-400 transition-colors">รีวิว VIP</a>
+            </nav>
+
+            <!-- Call CTA Button -->
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="#contact" class="wood-btn text-forest-950 font-semibold px-5 py-2.5 rounded-full text-sm flex items-center gap-2 uppercase tracking-wide">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span>นัดชมบ้านตัวอย่าง</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-slate-300 hover:text-amberGold-400 text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Nav -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-forest-900 border-b border-wood-500/20 px-4 pt-2 pb-6 space-y-3">
+            <a href="#hero" class="mobile-link block py-2 text-slate-300 hover:text-amberGold-400">หน้าแรก</a>
+            <a href="#catalog" class="mobile-link block py-2 text-slate-300 hover:text-amberGold-400">แบบบ้านสวนไม้หรู</a>
+            <a href="#craftsmanship" class="mobile-link block py-2 text-slate-300 hover:text-amberGold-400">คุณค่าและงานไม้</a>
+            <a href="#calculator" class="mobile-link block py-2 text-slate-300 hover:text-amberGold-400">คำนวณราคาบ้านไม้</a>
+            <a href="#gallery" class="mobile-link block py-2 text-slate-300 hover:text-amberGold-400">ผลงานจริง</a>
+            <a href="#testimonials" class="mobile-link block py-2 text-slate-300 hover:text-amberGold-400">รีวิว VIP</a>
+            <a href="#contact" class="mobile-link wood-btn text-forest-950 text-center font-semibold py-3 rounded-xl block mt-4">
+                นัดชมบ้านสวนตัวอย่าง
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Background Slide Image with Dark Forest Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img id="hero-bg" src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80" 
+                 alt="Luxury Wooden Resort House in Nature" 
+                 class="w-full h-full object-cover transition-all duration-1000 scale-105">
+            <div class="absolute inset-0 bg-gradient-to-r from-forest-950 via-forest-950/85 to-forest-950/40"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-forest-950 via-transparent to-forest-950/60"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-amberGold-500/40 bg-amberGold-500/10 backdrop-blur-md mb-6">
+                    <i class="fa-solid fa-leaf text-amberGold-400 text-xs"></i>
+                    <span class="text-xs font-semibold text-amberGold-400 tracking-wider uppercase">Luxury Wooden Modular & Resort Houses</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight mb-6">
+                    สัมผัสธรรมชาติอย่างหรูหรา... <br>
+                    <span class="wood-gradient-text">บ้านไม้โมเดิร์นเพื่อชีวิตที่เหนือระดับ</span>
+                </h1>
+                <p class="text-sand-100 text-lg sm:text-xl font-light leading-relaxed mb-8">
+                    นวัตกรรมบ้านน็อคดาวน์ไม้พรีเมียม สไตล์รีสอร์ตส่วนตัว โครงสร้างทนทาน ฉนวนกันความร้อน อบอุ่นด้วยสัมผัสไม้แท้ ติดตั้งรวดเร็วในสวนสวยของคุณ
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#catalog" class="wood-btn text-forest-950 font-semibold px-8 py-4 rounded-xl text-center shadow-lg hover:shadow-amberGold-500/20 transition-all flex items-center justify-center gap-3">
+                        <span>ดูแบบบ้านสวนหรู</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#calculator" class="border border-amberGold-500/40 hover:border-amberGold-400 bg-forest-900/60 hover:bg-forest-800 backdrop-blur-md text-white font-medium px-8 py-4 rounded-xl text-center transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-calculator text-amberGold-400"></i>
+                        <span>คำนวณราคาบ้านไม้</span>
+                    </a>
+                </div>
+
+                <!-- Stats Quick View -->
+                <div class="grid grid-cols-3 gap-6 mt-14 pt-8 border-t border-forest-800">
+                    <div>
+                        <p class="text-3xl font-serif font-bold text-amberGold-400">100%</p>
+                        <p class="text-xs text-slate-400 mt-1 uppercase tracking-wider">ไม้ผ่านการอบกันปลวก/ความชื้น</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-serif font-bold text-amberGold-400">30-45</p>
+                        <p class="text-xs text-slate-400 mt-1 uppercase tracking-wider">วัน พร้อมเข้าอยู่อาศัย</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-serif font-bold text-amberGold-400">15 ปี</p>
+                        <p class="text-xs text-slate-400 mt-1 uppercase tracking-wider">การรับประกันโครงสร้าง</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Navigation Dots -->
+        <div class="absolute bottom-8 right-8 z-20 hidden md:flex items-center gap-3 bg-forest-900/80 p-2 rounded-full border border-amberGold-500/20 backdrop-blur-md">
+            <button onclick="changeHeroSlide(0)" class="hero-dot w-3 h-3 rounded-full bg-amberGold-500 transition-all" aria-label="Slide 1"></button>
+            <button onclick="changeHeroSlide(1)" class="hero-dot w-3 h-3 rounded-full bg-slate-600 hover:bg-amberGold-400 transition-all" aria-label="Slide 2"></button>
+            <button onclick="changeHeroSlide(2)" class="hero-dot w-3 h-3 rounded-full bg-slate-600 hover:bg-amberGold-400 transition-all" aria-label="Slide 3"></button>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section id="catalog" class="py-24 bg-forest-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-amberGold-500 text-sm font-semibold tracking-widest uppercase">WOODEN RESORT COLLECTION</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-2 mb-4">แบบบ้านสวนไม้หรูยอดนิยม</h2>
+                <div class="w-20 h-1 bg-amberGold-500 mx-auto rounded-full mb-6"></div>
+                <p class="text-slate-400 font-light">รังสรรค์ด้วยไม้พรีเมียม ผสานงานสถาปัตยกรรมรีสอร์ต เปิดรับมุมมองธรรมชาติและความโปร่งสบายอย่างลงตัว</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12">
+                <button onclick="filterHouse('all')" class="filter-btn active px-6 py-2.5 rounded-full text-sm font-medium border border-amberGold-500 bg-amberGold-500 text-forest-950 transition-all">ทั้งหมด</button>
+                <button onclick="filterHouse('haven')" class="filter-btn px-6 py-2.5 rounded-full text-sm font-medium border border-amberGold-500/30 hover:border-amberGold-500 text-slate-300 hover:text-amberGold-400 transition-all">Forest Haven (ไม้สัก)</button>
+                <button onclick="filterHouse('nordic')" class="filter-btn px-6 py-2.5 rounded-full text-sm font-medium border border-amberGold-500/30 hover:border-amberGold-500 text-slate-300 hover:text-amberGold-400 transition-all">Nordic Pavilion (ไม้สน)</button>
+                <button onclick="filterHouse('resort')" class="filter-btn px-6 py-2.5 rounded-full text-sm font-medium border border-amberGold-500/30 hover:border-amberGold-500 text-slate-300 hover:text-amberGold-400 transition-all">Grand Resort Villa</button>
+            </div>
+
+            <!-- Houses Grid -->
+            <div id="house-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- House cards injected by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Material & Craftsmanship Highlight Section -->
+    <section id="craftsmanship" class="py-24 bg-forest-950 border-t border-b border-wood-500/10 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amberGold-500 text-sm font-semibold tracking-widest uppercase">PREMIUM WOOD & CRAFTSMANSHIP</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-2 mb-4">จุดเด่นของไม้และคุณภาพงานช่าง</h2>
+                <div class="w-20 h-1 bg-amberGold-500 mx-auto rounded-full mb-6"></div>
+                <p class="text-slate-400 font-light">พิถีพิถันตั้งแต่การคัดสรรเนื้อไม้เกรดสูงสุด จนถึงวิศวกรรมการประกอบตัวบ้านเพื่อความทนทานนับสิบปี</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Highlight 1 -->
+                <div class="bg-forest-900/60 p-8 rounded-2xl border border-wood-500/20 hover:border-amberGold-500/50 transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-xl bg-amberGold-500/10 border border-amberGold-500/30 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-tree-city text-2xl text-amberGold-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">ไม้พรีเมียมอบแห้ง 100%</h3>
+                    <p class="text-sm text-slate-400 font-light leading-relaxed">
+                        ผ่านกระบวนการ Kiln-Dried อบกันปลวก ปลวกไม่กิน ไม้ไม่บิดงอ ทนความชื้นและสภาพอากาศเขตร้อนได้สมบูรณ์แบบ
+                    </p>
+                </div>
+
+                <!-- Highlight 2 -->
+                <div class="bg-forest-900/60 p-8 rounded-2xl border border-wood-500/20 hover:border-amberGold-500/50 transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-xl bg-amberGold-500/10 border border-amberGold-500/30 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-temperature-arrow-down text-2xl text-amberGold-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">ฉนวนกันความร้อน 3 ชั้น</h3>
+                    <p class="text-sm text-slate-400 font-light leading-relaxed">
+                        ซับเสียงและป้องกันความร้อนด้วย Rockwool & PE Foil หนาพิเศษ ทำให้ภายในบ้านไม้เย็นสบายแม้แดดจัดกลางแจ้ง
+                    </p>
+                </div>
+
+                <!-- Highlight 3 -->
+                <div class="bg-forest-900/60 p-8 rounded-2xl border border-wood-500/20 hover:border-amberGold-500/50 transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-xl bg-amberGold-500/10 border border-amberGold-500/30 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-cubes text-2xl text-amberGold-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">โครงสร้างเหล็กซ่อนไม้</h3>
+                    <p class="text-sm text-slate-400 font-light leading-relaxed">
+                        ผสานโครงเหล็กกำลังสูง Galvanized ซ่อนใต้ความอบอุ่นของไม้แท้ ให้ความแข็งแรง รับน้ำหนัก และต้านพายุได้ดีเยี่ยม
+                    </p>
+                </div>
+
+                <!-- Highlight 4 -->
+                <div class="bg-forest-900/60 p-8 rounded-2xl border border-wood-500/20 hover:border-amberGold-500/50 transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-xl bg-amberGold-500/10 border border-amberGold-500/30 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-hammer text-2xl text-amberGold-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">งานช่างประณีตสไตล์รีสอร์ต</h3>
+                    <p class="text-sm text-slate-400 font-light leading-relaxed">
+                        ควบคุมการผลิตโดยทีมสถาปนิกและช่างไม้เชี่ยวชาญ เก็บรายละเอียดรอยต่อ ลบมุมไม้ ละเมียดละไมทุกตารางนิ้ว
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Price Calculator & Customizer -->
+    <section id="calculator" class="py-24 bg-forest-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amberGold-500 text-sm font-semibold tracking-widest uppercase">CUSTOM WOODEN HOME CALCULATOR</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-2 mb-4">ปรับแต่งคำนวณราคาบ้านไม้สวน</h2>
+                <div class="w-20 h-1 bg-amberGold-500 mx-auto rounded-full mb-6"></div>
+                <p class="text-slate-400 font-light">เลือกระดับขนาด ชนิดไม้หลัก และฟังก์ชั่นเสริมตามจินตนาการของคุณ เพื่อประเมินราคาบ้านสวนไม้ในฝัน</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <!-- Configurator Controls -->
+                <div class="lg:col-span-7 bg-forest-950 p-6 sm:p-8 rounded-2xl border border-wood-500/30 space-y-8">
+                    <!-- Step 1: Size -->
+                    <div>
+                        <label class="block text-amberGold-400 text-sm font-semibold uppercase tracking-wider mb-3">1. ขนาดและพื้นที่ใช้สอย</label>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                            <button type="button" onclick="selectSize(55, 950000, 'S')" id="size-btn-S" class="size-btn p-3 text-center rounded-xl border border-wood-500/40 bg-forest-900 text-white hover:border-amberGold-500 transition-all active-size">
+                                <span class="block text-xs text-slate-400">Size S</span>
+                                <span class="block text-sm font-bold">55 ตร.ม.</span>
+                            </button>
+                            <button type="button" onclick="selectSize(90, 1550000, 'M')" id="size-btn-M" class="size-btn p-3 text-center rounded-xl border border-wood-500/40 bg-forest-900 text-white hover:border-amberGold-500 transition-all">
+                                <span class="block text-xs text-slate-400">Size M</span>
+                                <span class="block text-sm font-bold">90 ตร.ม.</span>
+                            </button>
+                            <button type="button" onclick="selectSize(140, 2450000, 'L')" id="size-btn-L" class="size-btn p-3 text-center rounded-xl border border-wood-500/40 bg-forest-900 text-white hover:border-amberGold-500 transition-all">
+                                <span class="block text-xs text-slate-400">Size L</span>
+                                <span class="block text-sm font-bold">140 ตร.ม.</span>
+                            </button>
+                            <button type="button" onclick="selectSize(210, 3650000, 'XL')" id="size-btn-XL" class="size-btn p-3 text-center rounded-xl border border-wood-500/40 bg-forest-900 text-white hover:border-amberGold-500 transition-all">
+                                <span class="block text-xs text-slate-400">Size XL</span>
+                                <span class="block text-sm font-bold">210 ตร.ม.</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Wood Selection -->
+                    <div>
+                        <label class="block text-amberGold-400 text-sm font-semibold uppercase tracking-wider mb-3">2. ชนิดไม้หลักตกแต่ง (Wood Type)</label>
+                        <div class="space-y-3">
+                            <label class="flex items-center justify-between p-3.5 rounded-xl border border-wood-500/30 bg-forest-900 cursor-pointer hover:border-amberGold-500 transition-colors">
+                                <div class="flex items-center gap-3">
+                                    <input type="radio" name="woodType" value="0" checked onchange="updateCalculator()" class="text-amberGold-500 focus:ring-0">
+                                    <div>
+                                        <p class="text-sm font-medium text-white">ไม้สนอเมริกาแปรรูปอบแห้ง (Southern Yellow Pine)</p>
+                                        <p class="text-xs text-slate-400">โทนสีสว่าง นอร์ดิก มินิมอล อบอุ่นเป็นธรรมชาติ</p>
+                                    </div>
+                                </div>
+                                <span class="text-xs text-slate-400">Standard</span>
+                            </label>
+
+                            <label class="flex items-center justify-between p-3.5 rounded-xl border border-wood-500/30 bg-forest-900 cursor-pointer hover:border-amberGold-500 transition-colors">
+                                <div class="flex items-center gap-3">
+                                    <input type="radio" name="woodType" value="120000" onchange="updateCalculator()" class="text-amberGold-500 focus:ring-0">
+                                    <div>
+                                        <p class="text-sm font-medium text-white">ไม้เต็ง / ไม้แดงพรีเมียม (Hardwood Select)</p>
+                                        <p class="text-xs text-slate-400">โทนสีน้ำตาลแดงเข้ม แข็งแรง ทนแดดทนฝนกลางแจ้งสูง</p>
+                                    </div>
+                                </div>
+                                <span class="text-sm font-semibold text-amberGold-400">+฿120,000</span>
+                            </label>
+
+                            <label class="flex items-center justify-between p-3.5 rounded-xl border border-wood-500/30 bg-forest-900 cursor-pointer hover:border-amberGold-500 transition-colors">
+                                <div class="flex items-center gap-3">
+                                    <input type="radio" name="woodType" value="280000" onchange="updateCalculator()" class="text-amberGold-500 focus:ring-0">
+                                    <div>
+                                        <p class="text-sm font-medium text-white">ไม้สักทองพรีเมียมเกรด A (Golden Teak Wood)</p>
+                                        <p class="text-xs text-slate-400">ที่สุดแห่งความหรูหรา ลายไม้ทองอร่าม ปลวกไม่รบกวน ทรงคุณค่า</p>
+                                    </div>
+                                </div>
+                                <span class="text-sm font-semibold text-amberGold-400">+฿280,000</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Special Functions -->
+                    <div>
+                        <label class="block text-amberGold-400 text-sm font-semibold uppercase tracking-wider mb-3">3. ฟังก์ชั่นเสริมบ้านสวน (Add-on Features)</label>
+                        <div class="space-y-3">
+                            <label class="flex items-center justify-between p-3.5 rounded-xl border border-wood-500/30 bg-forest-900 cursor-pointer hover:border-amberGold-500 transition-colors">
+                                <div class="flex items-center gap-3">
+                                    <input type="checkbox" id="addon-deck" value="85000" onchange="updateCalculator()" class="rounded text-amberGold-500 focus:ring-0">
+                                    <div>
+                                        <p class="text-sm font-medium text-white">ชานเรือนระเบียงไม้กว้าง (Outdoor Wooden Terrace)</p>
+                                        <p class="text-xs text-slate-400">ยื่นรับวิวสวน/ริมน้ำ พร้อมราวกั้นไม้และที่นั่งพักผ่อน</p>
+                                    </div>
+                                </div>
+                                <span class="text-sm font-semibold text-amberGold-400">+฿85,000</span>
+                            </label>
+
+                            <label class="flex items-center justify-between p-3.5 rounded-xl border border-wood-500/30 bg-forest-900 cursor-pointer hover:border-amberGold-500 transition-colors">
+                                <div class="flex items-center gap-3">
+                                    <input type="checkbox" id="addon-skylight" value="55000" onchange="updateCalculator()" class="rounded text-amberGold-500 focus:ring-0">
+                                    <div>
+                                        <p class="text-sm font-medium text-white">หลังคากระจกรับแสงธรรมชาติ (Glass Skylight System)</p>
+                                        <p class="text-xs text-slate-400">กระจกนิรภัยกรองความร้อน ดูดาวและรับแสงธรรมชาติยามเช้า</p>
+                                    </div>
+                                </div>
+                                <span class="text-sm font-semibold text-amberGold-400">+฿55,000</span>
+                            </label>
+
+                            <label class="flex items-center justify-between p-3.5 rounded-xl border border-wood-500/30 bg-forest-900 cursor-pointer hover:border-amberGold-500 transition-colors">
+                                <div class="flex items-center gap-3">
+                                    <input type="checkbox" id="addon-smarthome" value="48000" onchange="updateCalculator()" class="rounded text-amberGold-500 focus:ring-0">
+                                    <div>
+                                        <p class="text-sm font-medium text-white">ระบบ Smart Home & Nature Sensor</p>
+                                        <p class="text-xs text-slate-400">ควบคุมไฟส่องสว่างสวน, แอร์, และม่านไฟฟ้าผ่านมือถือ</p>
+                                    </div>
+                                </div>
+                                <span class="text-sm font-semibold text-amberGold-400">+฿48,000</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Price Summary Card -->
+                <div class="lg:col-span-5 bg-gradient-to-b from-forest-900 to-forest-950 p-6 sm:p-8 rounded-2xl border border-amberGold-500/40 shadow-2xl relative sticky top-28">
+                    <div class="absolute -top-3 right-6 bg-amberGold-500 text-forest-950 font-bold text-[10px] px-3 py-1 rounded-full uppercase tracking-widest">
+                        Resort Estimate
+                    </div>
+                    
+                    <h3 class="text-xl font-serif font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-calculator text-amberGold-400"></i>
+                        <span>สรุปการประเมินราคาบ้านไม้</span>
+                    </h3>
+
+                    <div class="space-y-4 text-sm pb-6 border-b border-forest-800">
+                        <div class="flex justify-between text-slate-300">
+                            <span>ขนาดบ้านไม้สวน:</span>
+                            <span id="summary-size-label" class="font-medium text-white">Size S (55 ตร.ม.)</span>
+                        </div>
+                        <div class="flex justify-between text-slate-300">
+                            <span>ราคาเริ่มต้นตัวบ้าน:</span>
+                            <span id="summary-base-price" class="font-medium text-white">฿950,000</span>
+                        </div>
+                        <div class="flex justify-between text-slate-300">
+                            <span>ชนิดไม้หลัก:</span>
+                            <span id="summary-wood-price" class="font-medium text-white">฿0</span>
+                        </div>
+                        <div class="flex justify-between text-slate-300">
+                            <span>ฟังก์ชั่นเสริมบ้านสวน:</span>
+                            <span id="summary-addons-price" class="font-medium text-white">฿0</span>
+                        </div>
+                    </div>
+
+                    <div class="py-6">
+                        <p class="text-xs text-slate-400 mb-1">ราคาสุทธิประเมินเบื้องต้น (ไม่รวมฐานราก)</p>
+                        <p id="summary-total-price" class="text-3xl sm:text-4xl font-serif font-bold text-amberGold-400">
+                            ฿950,000
+                        </p>
+                        <p class="text-[11px] text-slate-500 mt-2">*ราคานี้รวมการอบกันปลวก/เคลือบน้ำยา และงานประกอบติดตั้งพร้อมอยู่แล้ว</p>
+                    </div>
+
+                    <button onclick="bookCalculatedModel()" class="w-full wood-btn text-forest-950 font-bold py-4 rounded-xl text-center shadow-lg transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-compass-drafting"></i>
+                        <span>จองนัดปรึกษาสถาปนิก / ส่งใบเสนอราคา</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery & Experience Section -->
+    <section id="gallery" class="py-24 bg-forest-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-amberGold-500 text-sm font-semibold tracking-widest uppercase">GALLERY & ATMOSPHERE</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-2 mb-4">แกลเลอรีบรรยากาศบ้านสวนไม้จริง</h2>
+                <div class="w-20 h-1 bg-amberGold-500 mx-auto rounded-full mb-6"></div>
+                <p class="text-slate-400 font-light">แรงบันดาลใจแห่งการพักผ่อน ท่ามกลางแมกไม้ ต้นใหญ่ และสายน้ำธรรมชาติ</p>
+            </div>
+
+            <!-- Gallery Filter -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-10">
+                <button onclick="filterGallery('all')" class="gal-btn active px-5 py-2 rounded-full text-xs font-medium border border-amberGold-500 bg-amberGold-500 text-forest-950">ทั้งหมด</button>
+                <button onclick="filterGallery('garden')" class="gal-btn px-5 py-2 rounded-full text-xs font-medium border border-wood-500/30 text-slate-300 hover:text-amberGold-400">บ้านสวนธรรมชาติ</button>
+                <button onclick="filterGallery('water')" class="gal-btn px-5 py-2 rounded-full text-xs font-medium border border-wood-500/30 text-slate-300 hover:text-amberGold-400">วิลล่าริมน้ำ</button>
+                <button onclick="filterGallery('interior')" class="gal-btn px-5 py-2 rounded-full text-xs font-medium border border-wood-500/30 text-slate-300 hover:text-amberGold-400">งานไม้ภายใน</button>
+            </div>
+
+            <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="gal-item garden group relative overflow-hidden rounded-2xl border border-wood-500/20 h-72">
+                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80" alt="Wood Cabin in Forest" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-forest-950 via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <span class="text-xs text-amberGold-400 font-medium">บ้านสวนธรรมชาติ</span>
+                        <h4 class="text-white font-bold text-lg">The Forest Haven Villa</h4>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gal-item water group relative overflow-hidden rounded-2xl border border-wood-500/20 h-72">
+                    <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=800&q=80" alt="Lakeside Wood Villa" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-forest-950 via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <span class="text-xs text-amberGold-400 font-medium">วิลล่าริมน้ำ</span>
+                        <h4 class="text-white font-bold text-lg">Lakeside Pavilion</h4>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gal-item interior group relative overflow-hidden rounded-2xl border border-wood-500/20 h-72">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Wooden Living Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-forest-950 via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <span class="text-xs text-amberGold-400 font-medium">งานไม้ภายใน</span>
+                        <h4 class="text-white font-bold text-lg">Warm Teak Interior</h4>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gal-item garden group relative overflow-hidden rounded-2xl border border-wood-500/20 h-72">
+                    <img src="https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&w=800&q=80" alt="Nordic Wooden House" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-forest-950 via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <span class="text-xs text-amberGold-400 font-medium">บ้านสวนธรรมชาติ</span>
+                        <h4 class="text-white font-bold text-lg">Nordic Pine Pavilion</h4>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gal-item water group relative overflow-hidden rounded-2xl border border-wood-500/20 h-72">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80" alt="Resort Pool Terrace" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-forest-950 via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <span class="text-xs text-amberGold-400 font-medium">วิลล่าริมน้ำ</span>
+                        <h4 class="text-white font-bold text-lg">Grand Resort Pool Deck</h4>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gal-item interior group relative overflow-hidden rounded-2xl border border-wood-500/20 h-72">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80" alt="Wood Master Bedroom" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-forest-950 via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <span class="text-xs text-amberGold-400 font-medium">งานไม้ภายใน</span>
+                        <h4 class="text-white font-bold text-lg">Cozy Pine Master Bedroom</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-forest-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amberGold-500 text-sm font-semibold tracking-widest uppercase">VIP TESTIMONIALS</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-2 mb-4">เสียงตอบรับจากเจ้าของบ้านสวน</h2>
+                <div class="w-20 h-1 bg-amberGold-500 mx-auto rounded-full mb-6"></div>
+                <p class="text-slate-400 font-light">ความประทับใจจริงจากลูกค้าระดับ VIP ที่สร้างบ้านไม้พักผ่อนกับ LUXWOOD</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-forest-950 p-8 rounded-2xl border border-amberGold-500/20 relative">
+                    <i class="fa-solid fa-quote-right text-4xl text-amberGold-500/20 absolute top-6 right-6"></i>
+                    <div class="flex text-amberGold-400 gap-1 text-sm mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-300 text-sm italic mb-6 leading-relaxed">
+                        "สร้างบ้านสวนไม้สักทองไว้ที่ปากช่อง ประทับใจมาก กลิ่นหอมไม้ธรรมชาติและเก็บเสียงดีมาก แม้หน้าร้อนข้างในยังคงเย็นสบาย"
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full border border-amberGold-500/40 overflow-hidden bg-slate-800">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="VIP Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">คุณอนันต์ โชติอนันต์</h4>
+                            <p class="text-xs text-amberGold-400">เจ้าของบ้าน Forest Haven (เขาใหญ่)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-forest-950 p-8 rounded-2xl border border-amberGold-500/20 relative">
+                    <i class="fa-solid fa-quote-right text-4xl text-amberGold-500/20 absolute top-6 right-6"></i>
+                    <div class="flex text-amberGold-400 gap-1 text-sm mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-300 text-sm italic mb-6 leading-relaxed">
+                        "เลือก Zenith Nordic สร้างไว้ริมสระน้ำในสวน เป็นมุมรับแขกและนั่งทำงานที่สงบมาก งานเข้าไม้ประณีตสมราคาพรีเมียมครับ"
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full border border-amberGold-500/40 overflow-hidden bg-slate-800">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="VIP Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">ดร.ชัยวัฒน์ ธนโชติ</h4>
+                            <p class="text-xs text-amberGold-400">เจ้าของ Zenith Nordic (เชียงใหม่)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-forest-950 p-8 rounded-2xl border border-amberGold-500/20 relative">
+                    <i class="fa-solid fa-quote-right text-4xl text-amberGold-500/20 absolute top-6 right-6"></i>
+                    <div class="flex text-amberGold-400 gap-1 text-sm mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-300 text-sm italic mb-6 leading-relaxed">
+                        "ทีมงานช่วยให้คำแนะนำการเตรียมฐานรากในสวนอย่างดี ติดตั้งเสร็จภายใน 35 วันโดยไม่ทำลายต้นไม้เดิมรอบบ้านเลย ประทับใจมากค่ะ"
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full border border-amberGold-500/40 overflow-hidden bg-slate-800">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="VIP Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">คุณนลินี สุวรรณเวช</h4>
+                            <p class="text-xs text-amberGold-400">เจ้าของ Grand Sanctuary (ราชบุรี)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Showroom Appointment Section -->
+    <section id="contact" class="py-24 bg-forest-950 relative border-t border-amberGold-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Contact Info -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-amberGold-500 text-sm font-semibold tracking-widest uppercase">VISIT OUR SHOWROOM</span>
+                        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-2 mb-4">นัดหมายชมบ้านสวนตัวอย่างจริง</h2>
+                        <p class="text-slate-400 font-light">สัมผัสบรรยากาศบ้านไม้จริงท่ามกลางสวนธรรมชาติ ณ โชว์รูม LUXWOOD ได้ทุกวัน</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-forest-900 border border-wood-500/20">
+                            <div class="w-10 h-10 rounded-lg bg-amberGold-500/10 flex items-center justify-center text-amberGold-400 shrink-0">
+                                <i class="fa-solid fa-tree"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold text-sm">LUXWOOD Garden Showroom</h4>
+                                <p class="text-xs text-slate-400 mt-1">88/9 หมู่ 5 ถนนราชพฤกษ์-ตลิ่งชัน แขวงบางระมาด เขตตลิ่งชัน กรุงเทพมหานคร 10170</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-4 rounded-xl bg-forest-900 border border-wood-500/20">
+                            <div class="w-10 h-10 rounded-lg bg-amberGold-500/10 flex items-center justify-center text-amberGold-400 shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold text-sm">สายด่วนนัดหมายที่ปรึกษาโครงการ</h4>
+                                <p class="text-xs text-amberGold-400 font-mono mt-1">02-777-8899 / 081-555-9988</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-4 rounded-xl bg-forest-900 border border-wood-500/20">
+                            <div class="w-10 h-10 rounded-lg bg-amberGold-500/10 flex items-center justify-center text-amberGold-400 shrink-0">
+                                <i class="fa-brands fa-line text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold text-sm">LINE Official Account</h4>
+                                <p class="text-xs text-slate-400 mt-1">@luxwood (มี @ ด้านหน้า)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Frame -->
+                    <div class="h-48 rounded-2xl overflow-hidden border border-wood-500/20 relative bg-forest-900">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.3421289123!2d100.4355!3d13.7651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDQ1JzU0LjQiTiAxMDDCsDI2JzA3LjgiRQ!5e0!3m2!1sth!2sth!4v1650000000000!5m2!1sth!2sth" 
+                                class="w-full h-full border-0 grayscale opacity-70 hover:opacity-100 transition-opacity" 
+                                allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <!-- Booking Form -->
+                <div class="lg:col-span-7 bg-forest-900 p-8 rounded-2xl border border-amberGold-500/30">
+                    <h3 class="text-2xl font-serif font-bold text-white mb-6">ลงทะเบียนนัดชมบ้านสวน / รับโบรชัวร์ไม้พรีเมียม</h3>
+                    
+                    <form id="booking-form" onsubmit="handleBookingSubmit(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">ชื่อ-นามสกุล *</label>
+                                <input type="text" required placeholder="คุณสมชาย รักษ์ธรรมชาติ" class="w-full bg-forest-950 border border-wood-500/40 rounded-xl p-3.5 text-white focus:border-amberGold-500 focus:outline-none text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">เบอร์โทรศัพท์ติดต่อ *</label>
+                                <input type="tel" required placeholder="081-234-5678" class="w-full bg-forest-950 border border-wood-500/40 rounded-xl p-3.5 text-white focus:border-amberGold-500 focus:outline-none text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">วันที่สะดวกเข้าชม Showroom</label>
+                                <input type="date" class="w-full bg-forest-950 border border-wood-500/40 rounded-xl p-3.5 text-white focus:border-amberGold-500 focus:outline-none text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">แบบบ้านสวนไม้ที่สนใจ</label>
+                                <select id="form-model-select" class="w-full bg-forest-950 border border-wood-500/40 rounded-xl p-3.5 text-white focus:border-amberGold-500 focus:outline-none text-sm">
+                                    <option value="The Forest Haven Villa">The Forest Haven Villa (ไม้สักโมเดิร์น)</option>
+                                    <option value="Zenith Garden Pavilion">Zenith Garden Pavilion (สไตล์นอร์ดิกไม้สน)</option>
+                                    <option value="Grand Sanctuary Resort">Grand Sanctuary Resort (พูลวิลล่าไม้หรู)</option>
+                                    <option value="Custom Size">สั่งทำขนาดพิเศษ (Custom Made)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">ข้อความเพิ่มเติม / จังหวัดสถานที่เตรียมสร้างบ้านสวน</label>
+                            <textarea rows="4" placeholder="เช่น มีที่ดินสวนอยู่ที่ อ.เมือง จ.กาญจนบุรี ต้องการสร้างริมน้ำ..." class="w-full bg-forest-950 border border-wood-500/40 rounded-xl p-3.5 text-white focus:border-amberGold-500 focus:outline-none text-sm"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full wood-btn text-forest-950 font-bold py-4 rounded-xl text-center shadow-lg transition-all flex items-center justify-center gap-2 text-base">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>ยืนยันนัดหมาย / ขอรับโบรชัวร์อิเล็กทรอนิกส์</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-forest-950 border-t border-forest-800 py-12 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded border border-amberGold-500/50 flex items-center justify-center bg-forest-900">
+                    <i class="fa-solid fa-tree text-amberGold-400"></i>
+                </div>
+                <span class="font-serif text-lg font-bold wood-gradient-text">LUXWOOD RESORT HOMES</span>
+            </div>
+            <p class="text-xs text-center sm:text-left">© 2026 LUXWOOD Resort Homes. All rights reserved. บ้านไม้โมเดิร์นสไตล์รีสอร์ต</p>
+            <div class="flex gap-4 text-slate-400">
+                <a href="#" class="hover:text-amberGold-400 transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-amberGold-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-amberGold-400 transition-colors"><i class="fa-brands fa-line"></i></a>
+                <a href="#" class="hover:text-amberGold-400 transition-colors"><i class="fa-solid fa-phone"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Contact -->
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+        <a href="https://line.me" target="_blank" class="w-12 h-12 rounded-full bg-[#00B900] text-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform" title="คุย LINE">
+            <i class="fa-brands fa-line text-2xl"></i>
+        </a>
+        <a href="tel:027778899" class="w-12 h-12 rounded-full wood-btn text-forest-950 flex items-center justify-center shadow-lg hover:scale-110 transition-transform" title="โทรเลย">
+            <i class="fa-solid fa-phone text-lg"></i>
+        </a>
+    </div>
+
+    <!-- Modal Floor Plan & Wood Specs Viewer -->
+    <div id="house-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="bg-forest-900 border border-amberGold-500/40 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto custom-scrollbar relative p-6 sm:p-8">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-2xl z-10">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div id="modal-content">
+                <!-- Content injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed top-24 right-6 z-50 bg-amberGold-500 text-forest-950 font-semibold px-6 py-3 rounded-xl shadow-2xl transition-all duration-300 transform translate-x-full opacity-0 flex items-center gap-2">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toast-message">ทำรายการสำเร็จ</span>
+    </div>
+
+    <!-- Application JavaScript Logic -->
+    <script>
+        // House Data Array
+        const houseData = [
+            {
+                id: 'w1',
+                type: 'haven',
+                name: 'The Forest Haven Villa',
+                category: 'บ้านไม้สักโมเดิร์น 2 ชั้น',
+                price: 2850000,
+                sqm: 165,
+                bed: 3,
+                bath: 3,
+                image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80',
+                floorPlan: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80',
+                description: 'บ้านไม้สักทองโมเดิร์น 2 ชั้น โดดเด่นด้วยชานเรือนระเบียงไม้ยื่นกว้างสำหรับจิบกาแฟยามเช้า และช่องกระจกบานใหญ่เปิดรับสายลมธรรมชาติในสวน',
+                woodSpecs: [
+                    'โครงสร้างไม้สักทองแท้เกรดพรีเมียม อบแห้งกันปลวก 100%',
+                    'ชานเรือนและบันไดไม้แดงเข้าเดือยแบบโบราณแข็งแรง',
+                    'หลังคาสไตล์กระท่อมโมเดิร์น พร้อมฉนวน PE Foil 3 ชั้น',
+                    'ห้องน้ำตกแต่งผนังไม้กันน้ำพร้อมอ่างอาบน้ำไม้จำลอง',
+                    'กระจกกรองแสงตัดรังสี UV 99% เปิดมุมมองธรรมชาติ'
+                ]
+            },
+            {
+                id: 'w2',
+                type: 'nordic',
+                name: 'Zenith Garden Pavilion',
+                category: 'บ้านสวนนอร์ดิกไม้สน',
+                price: 1380000,
+                sqm: 85,
+                bed: 1,
+                bath: 1,
+                image: 'https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&w=800&q=80',
+                floorPlan: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80',
+                description: 'บ้านสวนสไตล์นอร์ดิกจั่วสูง ตกแต่งด้วยไม้สนอเมริกาโทนสีสว่าง ยกรอบเปิดรับวิวสวน 360 องศา อบอุ่น ผ่อนคลาย เหมาะเป็นบ้านพักตากอากาศ',
+                woodSpecs: [
+                    'ไม้สนอเมริกา Southern Yellow Pine เคลือบสเตนใสโชว์ลายไม้',
+                    'กระจก Skylight ใต้หลังคาชมดาวในคืนอบอุ่น',
+                    'พื้นไม้ SPC ลายไม้ธรรมชาติ ทนรอยขีดข่วน',
+                    'ระบบระบายอากาศตามธรรมชาติ Passive Cooling Design',
+                    'เคาน์เตอร์บาร์ไม้จริงทรงสลับลายธรรมชาติ'
+                ]
+            },
+            {
+                id: 'w3',
+                type: 'resort',
+                name: 'Grand Sanctuary Resort',
+                category: 'พูลวิลล่าไม้หรู',
+                price: 3950000,
+                sqm: 230,
+                bed: 4,
+                bath: 4,
+                image: 'https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=800&q=80',
+                floorPlan: 'https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=800&q=80',
+                description: 'คฤหาสน์ไม้พูลวิลล่าสไตล์รีสอร์ต มาพร้อมเฉลียงไม้ริมน้ำขนาดใหญ่ ดีไซน์ผสานไม้เต็งและไม้สักอย่างลงตัว ให้ความรู้สึกสง่างามและเป็นหนึ่งเดียวกับสวน',
+                woodSpecs: [
+                    'เฉลียงไม้เต็งกลางแจ้งทนฝนทนแดด ยื่นยาวเชื่อมต่อสระว่ายน้ำ',
+                    'ผนังไม้สักซ้อนกรอบซ่อนสายไฟเนียนตา',
+                    'เพดานสูงโชว์คานไม้จริงสไตล์ Tropical Resort',
+                    'ระบบไฟ Smart Ambient Lighting ปรับแสงอบอุ่นยามค่ำคืน',
+                    'ฉนวนกันเสียง Rockwool หนา 100 มม.'
+                ]
+            }
+        ];
+
+        // Hero Images Slide
+        const heroImages = [
+            'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80',
+            'https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1920&q=80',
+            'https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&w=1920&q=80'
+        ];
+        let currentSlide = 0;
+
+        // Calculator State
+        let selectedSizeSqm = 55;
+        let selectedBasePrice = 950000;
+        let selectedSizeLabel = 'Size S (55 ตร.ม.)';
+
+        window.addEventListener('DOMContentLoaded', () => {
+            renderHouseGrid(houseData);
+            updateCalculator();
+
+            // Auto hero slide
+            setInterval(() => {
+                currentSlide = (currentSlide + 1) % heroImages.length;
+                changeHeroSlide(currentSlide);
+            }, 6000);
+
+            // Mobile menu toggle
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+
+        function changeHeroSlide(index) {
+            currentSlide = index;
+            const heroBg = document.getElementById('hero-bg');
+            heroBg.style.opacity = '0.2';
+            setTimeout(() => {
+                heroBg.src = heroImages[index];
+                heroBg.style.opacity = '1';
+            }, 300);
+
+            const dots = document.querySelectorAll('.hero-dot');
+            dots.forEach((dot, idx) => {
+                if (idx === index) {
+                    dot.classList.remove('bg-slate-600');
+                    dot.classList.add('bg-amberGold-500');
+                } else {
+                    dot.classList.remove('bg-amberGold-500');
+                    dot.classList.add('bg-slate-600');
+                }
+            });
+        }
+
+        function renderHouseGrid(items) {
+            const grid = document.getElementById('house-grid');
+            grid.innerHTML = items.map(house => `
+                <div class="bg-forest-950 rounded-2xl overflow-hidden border border-wood-500/20 hover:border-amberGold-500/60 transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between shadow-xl">
+                    <div>
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="${house.image}" alt="${house.name}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-4 left-4 bg-forest-950/80 backdrop-blur-md px-3 py-1 rounded-full border border-amberGold-500/30 text-xs font-semibold text-amberGold-400">
+                                ${house.category}
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <h3 class="text-xl font-serif font-bold text-white mb-2">${house.name}</h3>
+                            <p class="text-xs text-slate-400 mb-6 font-light line-clamp-2">${house.description}</p>
+
+                            <div class="grid grid-cols-3 gap-2 py-3 px-4 rounded-xl bg-forest-900 text-xs text-slate-300 border border-wood-500/20 mb-6">
+                                <div class="text-center">
+                                    <span class="block text-slate-500 text-[10px]">พื้นที่</span>
+                                    <span class="font-bold text-white">${house.sqm} ตร.ม.</span>
+                                </div>
+                                <div class="text-center border-x border-wood-500/20">
+                                    <span class="block text-slate-500 text-[10px]">ห้องนอน</span>
+                                    <span class="font-bold text-white">${house.bed} นอน</span>
+                                </div>
+                                <div class="text-center">
+                                    <span class="block text-slate-500 text-[10px]">ห้องน้ำ</span>
+                                    <span class="font-bold text-white">${house.bath} น้ำ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="px-6 pb-6 pt-0 flex items-center justify-between border-t border-forest-800/80 mt-auto">
+                        <div>
+                            <span class="text-[10px] text-slate-400 block uppercase">ราคาเริ่มต้น</span>
+                            <span class="text-lg font-serif font-bold text-amberGold-400">฿${house.price.toLocaleString()}</span>
+                        </div>
+                        <button onclick="openModal('${house.id}')" class="wood-btn text-forest-950 font-semibold text-xs px-4 py-2.5 rounded-lg flex items-center gap-1.5 shadow-md">
+                            <span>ดู Floor Plan & สเปกไม้</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterHouse(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-amberGold-500', 'text-forest-950', 'border-amberGold-500');
+                btn.classList.add('border-amberGold-500/30', 'text-slate-300');
+            });
+
+            event.target.classList.add('bg-amberGold-500', 'text-forest-950', 'border-amberGold-500');
+
+            if (category === 'all') {
+                renderHouseGrid(houseData);
+            } else {
+                const filtered = houseData.filter(h => h.type === category);
+                renderHouseGrid(filtered);
+            }
+        }
+
+        // Size Selection Logic
+        function selectSize(sqm, price, label) {
+            selectedSizeSqm = sqm;
+            selectedBasePrice = price;
+            selectedSizeLabel = `Size ${label} (${sqm} ตร.ม.)`;
+
+            document.querySelectorAll('.size-btn').forEach(btn => {
+                btn.classList.remove('border-amberGold-500', 'bg-amberGold-500/20');
+            });
+
+            const activeBtn = document.getElementById(`size-btn-${label}`);
+            if (activeBtn) {
+                activeBtn.classList.add('border-amberGold-500', 'bg-amberGold-500/20');
+            }
+
+            updateCalculator();
+        }
+
+        // Price Calculator Calculation
+        function updateCalculator() {
+            // Wood Radio
+            const woodRadios = document.getElementsByName('woodType');
+            let woodPrice = 0;
+            for (let radio of woodRadios) {
+                if (radio.checked) {
+                    woodPrice = parseInt(radio.value);
+                    break;
+                }
+            }
+
+            // Addons
+            let addonsPrice = 0;
+            if (document.getElementById('addon-deck').checked) addonsPrice += parseInt(document.getElementById('addon-deck').value);
+            if (document.getElementById('addon-skylight').checked) addonsPrice += parseInt(document.getElementById('addon-skylight').value);
+            if (document.getElementById('addon-smarthome').checked) addonsPrice += parseInt(document.getElementById('addon-smarthome').value);
+
+            const totalPrice = selectedBasePrice + woodPrice + addonsPrice;
+
+            document.getElementById('summary-size-label').innerText = selectedSizeLabel;
+            document.getElementById('summary-base-price').innerText = `฿${selectedBasePrice.toLocaleString()}`;
+            document.getElementById('summary-wood-price').innerText = `฿${woodPrice.toLocaleString()}`;
+            document.getElementById('summary-addons-price').innerText = `฿${addonsPrice.toLocaleString()}`;
+            document.getElementById('summary-total-price').innerText = `฿${totalPrice.toLocaleString()}`;
+        }
+
+        function bookCalculatedModel() {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            showToast(`คุณได้เลือกการประเมินราคา ${selectedSizeLabel} เรียบร้อยแล้ว`);
+        }
+
+        // Gallery Filter
+        function filterGallery(type) {
+            const btns = document.querySelectorAll('.gal-btn');
+            btns.forEach(b => {
+                b.classList.remove('bg-amberGold-500', 'text-forest-950');
+                b.classList.add('text-slate-300');
+            });
+            event.target.classList.add('bg-amberGold-500', 'text-forest-950');
+
+            const items = document.querySelectorAll('.gal-item');
+            items.forEach(item => {
+                if (type === 'all' || item.classList.contains(type)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Modal Handler
+        function openModal(id) {
+            const house = houseData.find(h => h.id === id);
+            if (!house) return;
+
+            const modalContent = document.getElementById('modal-content');
+            modalContent.innerHTML = `
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <div class="rounded-xl overflow-hidden border border-wood-500/30 mb-4 h-64 sm:h-80">
+                            <img id="modal-main-img" src="${house.image}" alt="${house.name}" class="w-full h-full object-cover">
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <button onclick="document.getElementById('modal-main-img').src='${house.image}'" class="p-2 rounded-lg bg-forest-950 border border-amberGold-500/30 text-xs text-amberGold-400 font-semibold flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-tree"></i> ภาพจำลอง 3D บ้านไม้
+                            </button>
+                            <button onclick="document.getElementById('modal-main-img').src='${house.floorPlan}'" class="p-2 rounded-lg bg-forest-950 border border-amberGold-500/30 text-xs text-amberGold-400 font-semibold flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-map"></i> แปลนบ้าน (Floor Plan)
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div>
+                            <span class="text-xs text-amberGold-500 font-semibold tracking-widest uppercase">${house.category}</span>
+                            <h3 class="text-2xl font-serif font-bold text-white mt-1">${house.name}</h3>
+                            <p class="text-2xl font-serif font-bold text-amberGold-400 mt-2">฿${house.price.toLocaleString()} <span class="text-xs text-slate-400 font-sans font-normal">บาท</span></p>
+                        </div>
+
+                        <p class="text-sm text-slate-300 font-light leading-relaxed">${house.description}</p>
+
+                        <div class="space-y-3">
+                            <h4 class="text-sm font-semibold text-white uppercase tracking-wider flex items-center gap-2">
+                                <i class="fa-solid fa-seedling text-amberGold-400"></i>
+                                <span>สเปกไม้และงานประกอบคุณภาพสูง</span>
+                            </h4>
+                            <ul class="space-y-2 text-xs text-slate-300">
+                                ${house.woodSpecs.map(spec => `
+                                    <li class="flex items-start gap-2">
+                                        <i class="fa-solid fa-check text-amberGold-400 mt-0.5"></i>
+                                        <span>${spec}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+
+                        <div class="pt-4 border-t border-forest-800 flex gap-4">
+                            <button onclick="selectAndCloseModal('${house.name}')" class="w-full wood-btn text-forest-950 font-bold py-3 rounded-xl text-center text-sm shadow-lg">
+                                สนใจแบบบ้านไม้นี้ (นัดชม/ปรึกษา)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('house-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('house-modal').classList.add('hidden');
+        }
+
+        function selectAndCloseModal(modelName) {
+            closeModal();
+            const formSelect = document.getElementById('form-model-select');
+            if (formSelect) formSelect.value = modelName;
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            showToast(`เลือก ${modelName} เรียบร้อยแล้ว`);
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').innerText = message;
+            toast.classList.remove('translate-x-full', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-x-full', 'opacity-0');
+            }, 3500);
+        }
+
+        function handleBookingSubmit(event) {
+            event.preventDefault();
+            showToast('ลงทะเบียนนัดหมายชมบ้านสวนเรียบร้อย เจ้าหน้าที่จะติดต่อกลับภายใน 24 ชม.');
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
